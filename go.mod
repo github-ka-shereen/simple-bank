@@ -1,6 +1,6 @@
 module github.com/github-ka-shereen/simple-bank
 
-go 1.23
+go 1.23.2
 
 require (
 	github.com/jackc/pgx/v5 v5.7.2

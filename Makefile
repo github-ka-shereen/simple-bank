@@ -3,7 +3,7 @@ export
 
 DB_URL=postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@localhost:5432/$(POSTGRES_DB)?sslmode=disable
 
-.PHONY: migrateup migratedown migratestatus migrateforce sqlc
+.PHONY: migrateup migratedown migratestatus migrateforce sqlc test
 
 # Show current migration version
 migratestatus:
@@ -33,3 +33,6 @@ migrateforce:
 
 sqlc:
 	sqlc generate
+
+test:
+	go test -v -cover ./...

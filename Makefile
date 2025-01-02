@@ -1,6 +1,3 @@
-include .env
-export
-
 DB_URL=postgresql://bank_app_user:BankApp123@localhost:5432/bank_app_database?sslmode=disable
 
 .PHONY: migrateup migratedown migratestatus migrateforce sqlc test

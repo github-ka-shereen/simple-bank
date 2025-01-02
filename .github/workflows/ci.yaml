@@ -25,7 +25,7 @@ jobs:
           POSTGRES_USER: bank_app_user
           POSTGRES_PASSWORD: BankApp123
         ports:
-          -5432:5432
+          - 5432:5432
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready

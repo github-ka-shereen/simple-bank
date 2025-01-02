@@ -1,7 +1,7 @@
 include .env
 export
 
-DB_URL=postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@localhost:5432/$(POSTGRES_DB)?sslmode=disable
+DB_URL=postgresql://bank_app_user:BankApp123@localhost:5432/bank_app_database?sslmode=disable
 
 .PHONY: migrateup migratedown migratestatus migrateforce sqlc test
 

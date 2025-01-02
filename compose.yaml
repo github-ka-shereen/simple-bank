@@ -1,0 +1,40 @@
+services:
+  # server:
+  #   build:
+  #     context: .
+  #     target: final
+  #   volumes:
+  #     - ./public/files:/app/public/files  # Mount host directory to container directory
+  #   ports:
+  #     - 8080:8080
+  #   restart: always
+  #   depends_on:
+  #     - db
+  #     - redis
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - PORT=${PORT}
+
+  db_bank_app:
+    image: postgres:15-alpine
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+
+  redis_bank_app:
+    restart: always
+    image: redis:7.0.8-alpine
+    ports:
+      - "6379:6379"  # External to internal port mapping
+    expose:
+      - 6379
+    env_file:
+      - .env
+
+volumes:
+  pgdata:

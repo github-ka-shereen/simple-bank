@@ -23,7 +23,7 @@ jobs:
         env:
           POSTGRES_DB: bank_app_database
           POSTGRES_USER: bank_app_user
-          POSTGRES_PASSWORD: @BankApp123
+          POSTGRES_PASSWORD: BankApp123
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready

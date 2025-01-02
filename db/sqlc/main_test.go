@@ -17,7 +17,7 @@ var testDB *pgxpool.Pool // Use pgxpool.Pool to handle pooled connections
 
 const (
 	dbDriver = "postgres"
-	DBSource = "postgresql://bank_app_user:@BankApp123@localhost:5432/bank_app_database?sslmode=disable"
+	DBSource = "postgresql://bank_app_user:BankApp123@localhost:5432/bank_app_database?sslmode=disable"
 )
 
 func TestMain(m *testing.M) {
